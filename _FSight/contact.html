@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Futuresight</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index_hero.html"><img src="img/logos/fsightLogo.svg" id="logo" alt="FutureSight logo"></a>
+
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index_hero.html" class="nav-link" id="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="whatWeDo.html" class="nav-link">What we do</a>
+        </li>
+        <li class="nav-item">
+          <a href="ourWork.html" class="nav-link">Our work</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Get in touch</a>
+        </li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <section id="contactContainer">
+    <p id="introLine">No sales pitches, just a friendly and helpful chat with the right person.</p>
+
+    <div id="contactForm">Contact Form</div>
+  </section>
+
+  <section id="advice">
+    <h1>Looking for advice?</h1>
+
+    <p>No sales pitch, just helpful advice.</p>
+
+    <a href="#" class="btn5">Email us</a>
+
+    <h3>Or call us on <a href="tel:+0000000000">000 000 0000</a></h3>
+  </section>
+
+  <footer>
+    <ul id="end">
+      <li class="footer">
+        <a href="index_hero.html">Home</a>
+      </li>
+      <li class="footer">
+        <a href="whatWeDo.html">What we do</a>
+      </li>
+      <li class="footer">
+        <a href="ourWork.html">Our work</a>
+      </li>
+      <li class="footer">
+        <a href="contact.html">Get in touch</a>
+      </li>
+    </ul>
+
+    <div id="privacy"><a href="#">Privacy Policy</a></div>
+
+    <a class="top" href="#logo">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAcjaoH3LoUv0sCWMIOPYrQRfBELOdy9RQ",
+      authDomain: "no1-fsight.firebaseapp.com",
+      projectId: "no1-fsight",
+      storageBucket: "no1-fsight.appspot.com",
+      messagingSenderId: "94228861802",
+      appId: "1:94228861802:web:709abe85f1abc9500c4b13",
+      measurementId: "G-PLDC7BETJM"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+</html>
