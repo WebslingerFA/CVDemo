@@ -1,0 +1,266 @@
+/*General layout*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: Helvetica, "Century Gothic", sans-serif;
+}
+
+/*Banner; navigation & logo*/
+header {
+    background-color: #003D4C;
+    min-height: 120px;
+    min-width: 300px; 
+}
+
+#logo {    
+    width: 15rem;
+    margin: 1rem;
+    padding-top: 1.5rem;
+}
+
+/*Nav container | uses flexbox & min-height for responsive action*/
+.navbar {
+    min-height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;    
+}
+
+/*ul | li items to display inline for 600px+ view*/
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+/*li items | remove bullet points*/
+.nav-item {
+    list-style: none;
+}
+
+/*a items | change color on hover & border hover*/
+.nav-link {
+    transition: 0.7 ease;
+    padding: 1rem;
+    color: #fbfbed;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.nav-link:hover {
+    border: 1px solid #fbfbed;
+    overflow: hidden;
+    margin: -1px;
+    color: #a5b3bf;
+}
+
+/*hamburger div | bars don't display in 600px+ & cursor is pointer on hover*/
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/*Hamburger bars*/
+.bar {
+    /*The bars must stack so display block*/
+    display: block;
+    /*Bar width*/
+    width: 40px;
+    /*Bar height*/
+    height: 1px;
+    /*So there is a small gap between the bars*/
+    margin: 11px auto;
+    /*Bars animation*/
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/*Navigation media query*/
+@media(max-width: 1050px) {
+    .hamburger {
+        display: block;
+    }
+
+    /*disappears 2nd bar*/
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    /*Animates 1st bar*/
+    .hamburger.active .bar:nth-child(1) {
+        transform:translateY(12px) rotate(45deg);
+    }
+
+    /*Animates 3rd bar*/
+    .hamburger.active .bar:nth-child(3) {
+        transform:translateY(-12px) rotate(-45deg);
+    }
+
+    /*Nav-menu collapse settings so only hamburger shows in small screen*/
+    .nav-menu {
+        /*Position: fixed ensures that when menu appears it stays in place 
+        on the screen even when user scrolls, until a link is clicked on*/
+        position: fixed;        
+        /*To hide fullscreen nav links*/
+        right: -110%;
+        top: 10px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #024d60;        
+        width: 92%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        padding: 20px;
+        margin: 16px 0;
+        font-size: 1.75rem;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+}
+
+/*'introA' section*/
+#introA {
+    background-color: #003D4C;
+    color: #fff;
+    margin: auto;
+    padding: 3rem;
+}
+
+.itemA {
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+}
+
+/*Research & insights section*/
+#research {
+    background-color: #506d85;
+    color: #fbfbed;
+    padding: 3rem;  
+    text-align: center;
+}
+
+.itemB {
+    padding: 1rem;
+}
+
+/*Product & service design section*/
+#product {
+    background-color: #a5b3bf;
+    color: #323642;
+    padding: 2rem;
+    text-align: center;
+}
+
+/*Diagnosis, metrics & product performance dashboards section*/
+#diagnosis {
+    background-color: #506d85;
+    color: #fbfbed;
+    padding: 2rem;  
+    text-align: center;
+}
+
+/*We help our clients section*/
+#clients {
+    display: grid;
+    grid-template-columns: 1fr;     
+    background-color: #A5B3BF;
+    color: #323642;
+    margin: auto;    
+}
+
+.item2 {
+    margin: auto;
+    text-align: center;
+    grid-column: 1 / 1;
+    padding: 1rem;   
+}
+
+#clientHeading {
+    margin: auto;
+    padding: 2rem 1rem 0.01rem 1rem;
+}
+
+.btn3 {
+    background-color: #fbfbed;
+    color: #05324e;
+    padding: 1rem;       
+    margin: 3rem auto;
+    height: 1rem;
+    text-decoration: none;
+}
+
+/*'advice' div*/
+#advice {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    text-align: center;
+    padding: 3rem;
+    background-color: #E2E2DA;
+    color: #323642;
+}
+
+.btn5 {    
+    background-color: #fbfbed;
+    color: #05324e;
+    padding: 1rem;
+    line-height: 1rem;
+    margin: auto;
+    text-decoration: none;  
+    border: 1px solid #fbfbed;
+    border-radius: 3px;
+}
+
+/*Footer */
+footer {
+    background-color: #003D4C;
+    color: #fbfbed;        
+}
+
+.footer {
+    list-style: none;
+}
+
+#end, #privacy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;    
+    padding: 1rem;
+    margin: auto 0;  
+}
+
+#end a, #privacy a {
+    color: #fbfbed;
+}
+
+.top {
+    color: #fbfbed;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
